@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
     <title>Centro Regional Universitario Ituzaingo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css">
     <link rel="stylesheet"
         href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script defer src="script.js"></script>
 </head>
 
@@ -79,6 +81,8 @@
         </div>
     </header>
 
+    <!--hero section-->
+
     <div class="relative h-screen flex items-center justify-center">
         <div class="absolute inset-0 bg-cover bg-center"
             style="background-image: url('./img/fondo%20crui%20frente.jpeg');">
@@ -97,6 +101,48 @@
             </div>
         </div>
     </div>
+
+    <!-- Sección con imagen a la izquierda y texto a la derecha -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-6 md:mb-0">
+                    <img src="./img/crui-patio.jpg" alt="Imagen del lugar del CRUI" class="w-full rounded-lg">
+                </div>
+                <div class="md:w-1/2 md:ml-8">
+                    <h2 class="text-2xl font-bold mb-4">Descubre el CRUI</h2>
+                    <p class="text-lg">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección con imagen a la izquierda y texto a la izquierda -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-6 md:mb-0 md:ml-8">
+                    <h2 class="text-2xl font-bold mb-4">Porque estudiar en el CRUI</h2>
+                    <p class="text-lg">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+                <div class="md:w-1/2 mb-6 md:mb-0">
+                    <img src="./img/fondo crui.jpeg" alt="Imagen del lugar del CRUI" class="w-full rounded-lg">
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!--footer-->
 
