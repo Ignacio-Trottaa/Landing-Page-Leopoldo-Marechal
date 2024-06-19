@@ -13,3 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+function toggleFAQ(id) {
+    const faq = document.getElementById(id);
+    faq.classList.toggle('hidden');
+}
+
