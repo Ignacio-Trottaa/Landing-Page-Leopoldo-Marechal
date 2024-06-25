@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" class="h-screen">
 
 <head>
     <meta charset="UTF-8">
@@ -15,18 +15,18 @@
 </head>
 
 <body class="bg-white">
-
+    <!--overflow-hidden: para esconder los scroll bar-->
     <header class="absolute inset-x-0 top-0 z-50">
         <nav class="flex items-center justify-between p-1.5 lg:px-8 bg-white" aria-label="Global">
             <div class="flex lg:flex-1">
                 <a href="index.html" class="-m-1.5 p-1.5">
-                    <img class="h-11 w-auto" src="./img/"
+                    <img class="h-11 w-auto" src="./img/marca-nueva-ituzaingo-01_0.png"
                         alt="Logo del Centro Regional Universitario de Ituzaingó">
                 </a>
             </div>
             <div class="flex lg:hidden">
                 <button id="open-menu-button" type="button"
-                    class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-black">
+                    class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white">
                     <span class="sr-only">Open main menu</span>
                     <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                         aria-hidden="true">
@@ -46,11 +46,10 @@
                     académica</a>
                 <a href="#"
                     class="relative text-[14px] font-semibold leading-5 text-black transition-colors duration-300 hover:text-gray-600">Agenda</a>
-                <a href="#"
+                <a href="contacto.html"
                     class="relative text-[14px] font-semibold leading-5 text-black transition-colors duration-300 hover:text-gray-600">Contacto</a>
             </div>
         </nav>
-
 
         <div id="mobile-menu" class="lg:hidden hidden" role="dialog" aria-modal="true">
             <div class="fixed inset-0 z-50"></div>
@@ -95,7 +94,7 @@
 
     <div class="relative h-screen flex items-center justify-center">
         <div class="absolute inset-0 bg-cover bg-center"
-            style="background-image: url('./img/fondo%20crui%20frente.jpeg');">
+            style="background-image: url('./img/fondo%20crui%20frente.jpeg'); background-size: cover; background-position: center;">
             <div class="absolute inset-0 bg-black opacity-50"></div>
         </div>
         <div class="relative z-10 text-white text-center px-6 lg:px-8">
@@ -170,20 +169,18 @@
         </div>
     </section>
 
-    <!-- Sección de Carreras Ofrecidas -->
-
     <!-- Nueva sección: Oferta Académica -->
     <section class="bg-gradient-to-r from-blue-500 to-green-500 py-16" id="oferta-academica" name="oferta-academica">
         <div class="container mx-auto px-4 py-12 bg-white rounded-lg shadow-lg">
             <div class="text-center mb-16">
                 <h1 class="text-4xl font-bold text-gray-800">Oferta Académica</h1>
-                <p class="text-lg mt-2 text-gray-500">Las oferta académica ofrecida por el CRUI</p>
+                <p class="text-lg mt-2 text-gray-500">La oferta académica ofrecida por el CRUI</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto p-4">
                 <!-- Tarjeta: Tecnicatura Superior en Desarrollo de Software -->
                 <div
-                    class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                    class="bg-white hover:shadow-xl shadow-[0_13px_19px_-3px_rgba(6,81,237,0.3)] transition-shadow duration-300 ease-in-out">
                     <div class="p-6">
                         <div class="flex items-center space-x-4 mb-4">
                             <div class="p-3 rounded-full bg-blue-100">
@@ -200,7 +197,7 @@
                             <li><i class="fas fa-check mr-2 text-blue-500"></i>Manejo de Bases de Datos</li>
                             <li><i class="fas fa-check mr-2 text-blue-500"></i>Principios de Ingeniería de Software</li>
                         </ul>
-                        <a href="#"
+                        <a href="infoTecSoftware.html" target="_blank"
                             class="inline-block px-6 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition-colors duration-300">Más
                             información</a>
                     </div>
@@ -208,7 +205,7 @@
 
                 <!-- Tarjeta: Tecnicatura en Enfermería -->
                 <div
-                    class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                    class="bg-white hover:shadow-xl shadow-[0_13px_19px_-3px_rgba(6,81,237,0.3)] transition-shadow duration-300 ease-in-out">
                     <div class="p-6">
                         <div class="flex items-center space-x-4 mb-4">
                             <div class="p-3 rounded-full bg-red-100">
@@ -223,16 +220,70 @@
                             <li><i class="fas fa-check mr-2 text-red-500"></i>Cuidados de Enfermería General</li>
                             <li><i class="fas fa-check mr-2 text-red-500"></i>Manejo de Emergencias y Urgencias</li>
                         </ul>
-                        <a href="#"
+                        <a href="https://www.ms.gba.gov.ar/sitios/capacitacion/2022/11/01/ingreso-carreras-2023/"
+                            target="_blank"
                             class="inline-block px-6 py-2 bg-red-500 text-white rounded-full hover:bg-red-600 transition-colors duration-300">Más
+                            información</a>
+                    </div>
+                </div>
+
+                <!-- Cartel: Nota Importante -->
+                <div class="col-span-2 bg-blue-100 border-l-4 border-blue-500 text-blue-900 p-4 mb-8" role="alert">
+                    <p class="font-bold">Nota Importante</p>
+                    <p>El examen de ingreso de las Carreras dictadas por la Universidad de la Matanza y la Universidad
+                        de
+                        Hurlingham se dictan en el CRUI para todos aquellos que sean residentes de Ituzaingó, pasado el
+                        curso/examen de ingreso las carreras se dictan en cada Universidad.</p>
+                </div>
+
+                <!-- Tarjeta: Carreras Universidad Nacional de La Matanza -->
+                <div
+                    class="bg-white hover:shadow-xl shadow-[0_13px_19px_-3px_rgba(6,81,237,0.3)] transition-shadow duration-300 ease-in-out">
+                    <div class="p-6">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <div class="p-3 rounded-full bg-yellow-100">
+                                <i class="fas fa-university text-yellow-600 text-xl"></i>
+                            </div>
+                            <h2 class="text-2xl font-semibold text-gray-800">Carreras con Universidad Nacional de La
+                                Matanza</h2>
+                        </div>
+                        <p class="text-gray-600">Carreras ofrecidas en articulación con la Universidad Nacional de La
+                            Matanza.</p>
+                        <ul class="mt-4 mb-6 text-gray-600">
+                            <li><i class="fas fa-check mr-2 text-yellow-500"></i>Ingeniería en Informática</li>
+                            <li><i class="fas fa-check mr-2 text-yellow-500"></i>Licenciatura en Administración</li>
+                        </ul>
+                        <a href="https://www.unlam.edu.ar" target="_blank"
+                            class="inline-block px-6 py-2 bg-yellow-500 text-white rounded-full hover:bg-yellow-600 transition-colors duration-300">Más
+                            información</a>
+                    </div>
+                </div>
+
+                <!-- Tarjeta: Carreras Universidad Nacional de Hurlingham -->
+                <div
+                    class="bg-white hover:shadow-xl shadow-[0_13px_19px_-3px_rgba(6,81,237,0.3)] transition-shadow duration-300 ease-in-out">
+                    <div class="p-6">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <div class="p-3 rounded-full bg-green-100">
+                                <i class="fas fa-university text-green-600 text-xl"></i>
+                            </div>
+                            <h2 class="text-2xl font-semibold text-gray-800">Carreras con Universidad Nacional de
+                                Hurlingham</h2>
+                        </div>
+                        <p class="text-gray-600">Carreras ofrecidas en articulación con la Universidad Nacional de
+                            Hurlingham.</p>
+                        <ul class="mt-4 mb-6 text-gray-600">
+                            <li><i class="fas fa-check mr-2 text-green-500"></i>Kinesiología / Fisiatría</li>
+                            <li><i class="fas fa-check mr-2 text-green-500"></i>Profesorado de Educación Física</li>
+                        </ul>
+                        <a href="https://www.unahur.edu.ar" target="_blank"
+                            class="inline-block px-6 py-2 bg-green-500 text-white rounded-full hover:bg-green-600 transition-colors duration-300">Más
                             información</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- FAQ -->
 
     <!-- Nueva sección: Preguntas Frecuentes (FAQ) -->
     <section class="bg-white py-16">
@@ -297,34 +348,20 @@
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
         <div class="container mx-auto px-6 lg:px-8 text-center">
-            <div class="flex flex-col lg:flex-row justify-center lg:justify-between items-center">
-                <!-- Mapa de Google -->
-                <div class="lg:w-2/5 mb-6 lg:mb-0">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.673410288035!2d-58.66992898846809!3d-34.662949960516336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbf92a2e20cbb%3A0xcb5c8962cdc149bf!2sCentro%20Regional%20Universitario%20de%20Ituzaing%C3%B3%20Sur!5e0!3m2!1ses!2sar!4v1719097575570!5m2!1ses!2sar"
-                        width="800" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-                <!-- Redes Sociales 
-                <div class="flex justify-center lg:justify-end mb-6 lg:mb-0 lg:w-1/5">
-                    <a href="#" class="mx-3 text-white hover:text-gray-400"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="mx-3 text-white hover:text-gray-400"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="mx-3 text-white hover:text-gray-400"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="mx-3 text-white hover:text-gray-400"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            -->
-                <!-- Derechos de Autor -->
-                <footer>
-                    <div class="lg:w-2/5 mx-auto mt-4">
-                        <p class="mb-0 text-center">Centro Regional Universitario de Ituzaingó &copy; 2024. Todos los
-                            derechos reservados.</p>
-                    </div>
-                </footer>
+            <!-- Mapa de Google -->
+            <div class="mb-6 lg:mb-0">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.673410288035!2d-58.66992898846809!3d-34.662949960516336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbf92a2e20cbb%3A0xcb5c8962cdc149bf!2sCentro%20Regional%20Universitario%20de%20Ituzaing%C3%B3%20Sur!5e0!3m2!1ses!2sar!4v1719097575570!5m2!1ses!2sar"
+                    width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <!-- Derechos de Autor -->
+            <div>
+                <p class="mb-0 text-center m-10">Centro Regional Universitario de Ituzaingó &copy; 2024. Todos los
+                    derechos reservados.</p>
             </div>
         </div>
     </footer>
-
-
 </body>
 
 </html>
