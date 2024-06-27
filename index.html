@@ -16,84 +16,31 @@
 
 <body class="bg-white">
     <!--overflow-hidden: para esconder los scroll bar-->
-    <header class="absolute inset-x-0 top-0 z-50">
-        <nav class="flex items-center justify-between p-1.5 lg:px-8 bg-white" aria-label="Global">
-            <div class="flex lg:flex-1">
-                <a href="index.html" class="-m-1.5 p-1.5">
-                    <img class="h-11 w-auto" src="./img/marca-nueva-ituzaingo-01_0.png"
-                        alt="Logo del Centro Regional Universitario de Ituzaingó">
-                </a>
-            </div>
-            <div class="flex lg:hidden">
-                <button id="open-menu-button" type="button"
-                    class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white">
-                    <span class="sr-only">Open main menu</span>
-                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                        aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                    </svg>
-                </button>
-            </div>
-            <div class="hidden lg:flex lg:gap-x-5">
-                <a href="index.html"
-                    class="relative text-[14px] font-semibold leading-5 text-black transition-colors duration-300 hover:text-gray-600">Inicio</a>
-                <a href="#sobre"
-                    class="relative text-[14px] font-semibold leading-5 text-black transition-colors duration-300 hover:text-gray-600">Sobre
-                    el CRUI</a>
-                <a href="#oferta-academica"
-                    class="relative text-[14px] font-semibold leading-5 text-black transition-colors duration-300 hover:text-gray-600">Oferta
-                    académica</a>
-                <a href="#"
-                    class="relative text-[14px] font-semibold leading-5 text-black transition-colors duration-300 hover:text-gray-600">Agenda</a>
-                <a href="contacto.html"
-                    class="relative text-[14px] font-semibold leading-5 text-black transition-colors duration-300 hover:text-gray-600">Contacto</a>
-            </div>
-        </nav>
-
-        <div id="mobile-menu" class="lg:hidden hidden" role="dialog" aria-modal="true">
-            <div class="fixed inset-0 z-50"></div>
-            <div
-                class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-                <div class="flex items-center justify-between">
-                    <a href="#" class="-m-1.5 p-1.5">
-                        <span class="sr-only">Company</span>
-                        <img class="h-8 w-auto" src="./img/1630620450076.ico" alt="Logo">
-                    </a>
-                    <button id="close-menu-button" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
-                        <span class="sr-only">Close menu</span>
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                            aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                </div>
-                <div class="mt-6 flow-root">
-                    <div class="-my-6 divide-y divide-gray-500/10">
-                        <div class="space-y-2 py-6">
-                            <a href="index.html"
-                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Inicio</a>
-                            <a href="#"
-                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Sobre
-                                el CRUI</a>
-                            <a href="#"
-                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Oferta
-                                academica</a>
-                            <a href="#"
-                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Agenda</a>
-                            <a href="#"
-                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contacto</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="nav" style="z-index: 10000;">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
         </div>
-    </header>
+        <div class="nav-btn">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        
+        <div class="nav-links">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+          <a href="#">Link 4</a>
+          <a href="#">Link 5</a>
+        </div>
+      </div>
 
     <!--hero section-->
 
     <div class="relative h-screen flex items-center justify-center">
-        <div class="absolute inset-0 bg-cover bg-center"
+        <div class="absolute inset-0 bg-cover bg-center" id="fondo"
             style="background-image: url('./img/fondo%20crui%20frente.jpeg'); background-size: cover; background-position: center;">
             <div class="absolute inset-0 bg-black opacity-50"></div>
         </div>
@@ -179,7 +126,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto p-4">
                 <!-- Tarjeta: Tecnicatura Superior en Desarrollo de Software -->
-                <div
+                <div style="border-radius: 16px;margin-top: 10px; margin-bottom: 10px;"
                     class="bg-white hover:shadow-xl shadow-[0_13px_19px_-3px_rgba(6,81,237,0.3)] transition-shadow duration-300 ease-in-out">
                     <div class="p-6">
                         <div class="flex items-center space-x-4 mb-4">
@@ -204,7 +151,7 @@
                 </div>
 
                 <!-- Tarjeta: Tecnicatura en Enfermería -->
-                <div
+                <div style="border-radius: 16px; margin-top: 10px; margin-bottom: 10px;"
                     class="bg-white hover:shadow-xl shadow-[0_13px_19px_-3px_rgba(6,81,237,0.3)] transition-shadow duration-300 ease-in-out">
                     <div class="p-6">
                         <div class="flex items-center space-x-4 mb-4">
@@ -228,7 +175,7 @@
                 </div>
 
                 <!-- Cartel: Nota Importante -->
-                <div class="col-span-2 bg-blue-100 border-l-4 border-blue-500 text-blue-900 p-4 mb-8" role="alert">
+                <div class="col-span-2 bg-blue-50 border-l-4 border-blue-500 text-blue-900 p-4 mb-8" role="alert">
                     <p class="font-bold">Nota Importante</p>
                     <p>El examen de ingreso de las Carreras dictadas por la Universidad de la Matanza y la Universidad
                         de
@@ -237,7 +184,7 @@
                 </div>
 
                 <!-- Tarjeta: Carreras Universidad Nacional de La Matanza -->
-                <div
+                <div style="border-radius: 16px; margin-top: 10px; margin-bottom: 10px; "
                     class="bg-white hover:shadow-xl shadow-[0_13px_19px_-3px_rgba(6,81,237,0.3)] transition-shadow duration-300 ease-in-out">
                     <div class="p-6">
                         <div class="flex items-center space-x-4 mb-4">
@@ -260,7 +207,7 @@
                 </div>
 
                 <!-- Tarjeta: Carreras Universidad Nacional de Hurlingham -->
-                <div
+                <div style="border-radius: 16px; margin-top: 10px; margin-bottom: 10px;""
                     class="bg-white hover:shadow-xl shadow-[0_13px_19px_-3px_rgba(6,81,237,0.3)] transition-shadow duration-300 ease-in-out">
                     <div class="p-6">
                         <div class="flex items-center space-x-4 mb-4">
@@ -348,11 +295,12 @@
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
         <div class="container mx-auto px-6 lg:px-8 text-center">
+            <h1 style="font-size: large ; font-weight: 600; margin-top: -20px; margin-bottom: 20px;">¿Dónde estamos?</h1>
             <!-- Mapa de Google -->
             <div class="mb-6 lg:mb-0">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.673410288035!2d-58.66992898846809!3d-34.662949960516336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbf92a2e20cbb%3A0xcb5c8962cdc149bf!2sCentro%20Regional%20Universitario%20de%20Ituzaing%C3%B3%20Sur!5e0!3m2!1ses!2sar!4v1719097575570!5m2!1ses!2sar"
-                    width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <!-- Derechos de Autor -->
@@ -363,5 +311,127 @@
         </div>
     </footer>
 </body>
+
+<style>
+    @media screen and (max-width: 768px) {
+    .grid{
+        display: block;
+    }
+    #fondo{
+        background-image: url('./img/fondo%20crui%20frente.jpeg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 70%;
+    
+    }
+    
+}
+
+    iframe{
+        border-radius: 20px;
+    }
+    .editame{
+        display: none;
+    }
+
+
+body {
+  margin: 0px;
+  font-family: 'segoe ui';
+}
+
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: #4d4d4d;
+  position: fixed;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: fixed;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+
+</style>
+
 
 </html>
