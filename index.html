@@ -14,11 +14,12 @@
     <script defer src="script.js"></script>
 </head>
 
-<body class="bg-white">
+<body id="inicio" class="bg-white">
     <!--overflow-hidden: para esconder los scroll bar-->
     <div class="nav" style="z-index: 10000;">
         <input type="checkbox" id="nav-check">
         <div class="nav-header">
+            <img class="logo-itu" style="position: fixed; width: 150px; height: auto;"  src="img/marca-nueva-ituzaingo-01_0.png" alt="Logo" class="nav-logo">
         </div>
         <div class="nav-btn">
           <label for="nav-check">
@@ -29,11 +30,11 @@
         </div>
         
         <div class="nav-links">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
-          <a href="#">Link 4</a>
-          <a href="#">Link 5</a>
+          <a href="#inicio">Inicio</a>
+          <a href="#sobre">Conoce mas</a>
+          <a href="#oferta-academica">Carreras</a>
+          <a href="#">Talleres</a>
+          <a href="#">Contacto</a>
         </div>
       </div>
 
@@ -47,9 +48,7 @@
         <div class="relative z-10 text-white text-center px-6 lg:px-8">
             <h1 class="text-4xl font-bold tracking-tight sm:text-6xl">Bienvenido al Centro Regional Universitario de
                 Ituzaingo</h1>
-            <p class="mt-6 text-lg leading-8">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus magni
-                temporibus ullam odio nihil incidunt, dolor odit nobis veniam sint. Tempore ipsa perspiciatis suscipit
-                natus voluptate dicta pariatur ut deserunt.</p>
+            <p class="mt-6 text-lg leading-8">Nos alegra muchísimo que hayas decidido unirte a nuestra comunidad. En el CRU Ituzaingó, creemos que cada estudiante tiene el potencial para lograr cosas increíbles, y estamos acá para ayudarte a alcanzar tus metas.</p>
             <div class="mt-6 flex justify-center">
                 <svg class="h-6 w-6 text-white animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -58,6 +57,8 @@
         </div>
     </div>
 
+    <!-- Sección con imagen a la izquierda y texto a la derecha -->
+    
     <!-- Sección con imagen a la izquierda y texto a la derecha -->
     <section class="py-16 bg-gray-50" id="sobre" name="sobre">
         <div class="container mx-auto px-6 lg:px-8">
@@ -69,14 +70,10 @@
                 <div class="md:w-1/2 md:ml-10">
                     <h2 class="text-3xl lg:text-4xl font-extrabold text-gray-900 mb-6">Descubre el CRUI</h2>
                     <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur voluptatibus dicta soluta,
-                        odio consequatur, nesciunt voluptates ab, culpa aut blanditiis officiis repellat unde incidunt
-                        assumenda. Sint voluptatem aliquid mollitia quibusdam.
+                        A través de este recorrido interactivo, podrás conocer nuestras modernas aulas equipadas con proyectores y pantallas interactivas, así como con sistema de climatización frío/calor. También podrás visitar nuestro laboratorio de informática equipado con 30 PCs de última tecnología, nuestro laboratorio itinerante con 15 netbooks, y nuestro gabinete diseñado para prácticas de enfermería.
                     </p>
                     <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora perspiciatis, sunt quae harum
-                        repellat doloremque ipsa doloribus explicabo neque! Magnam officia numquam porro cum fuga
-                        similique dolorem! Nemo, fuga perspiciatis!
+                        Explora nuestro recorrido interactivo y descubre todo lo que el CRUI tiene para ofrecerte. Estamos seguros de que encontrarás instalaciones que te inspirarán y facilitarán tu desarrollo académico.
                     </p>
                     <a href="#services"
                         class="inline-block px-8 py-3 text-white bg-green-500 hover:bg-green-700 rounded-lg shadow-md transition duration-300">Conoce
@@ -93,19 +90,13 @@
                 <div class="md:w-1/2 md:mr-10">
                     <h2 class="text-3xl lg:text-4xl font-extrabold text-gray-900 mb-6">Por qué estudiar en el CRUI</h2>
                     <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi velit asperiores earum minima
-                        consequuntur explicabo, repellat autem fugit praesentium temporibus nulla molestiae ea magnam
-                        nihil! Dolor alias neque assumenda fugit!
+                        En el Centro Regional Universitario de Ituzaingó (CRUI), no solo recibirás una educación de calidad, sino que también estarás en un entorno donde podrás crecer junto a tus amigos y compañeros de toda la vida. En el CRUI, la cercanía territorial y la comunidad local son fundamentales para nuestra identidad.
                     </p>
                     <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit rem saepe error sunt unde cumque
-                        tenetur praesentium hic fugit deserunt, vero ipsam perspiciatis nulla in eveniet mollitia quo
-                        sint alias.
+                        En el CRUI ofrecemos una amplia gama de programas, desde tecnicaturas en Desarrollo de Software y Enfermería hasta carreras universitarias en Educación Física, Kinesiología, Fisiatría, Administración e Ingeniería en Informática. Todas ellas diseñadas para prepararte efectivamente para el mercado laboral actual.
                     </p>
                     <p class="text-lg text-gray-700 leading-relaxed">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, voluptate sed quasi, dolore nemo
-                        mollitia suscipit corporis veritatis facilis labore, deserunt officiis fugit illo ipsum
-                        laboriosam est nisi in corrupti?
+                        Además de la formación académica, en el CRUI valoramos las actividades extracurriculares y los eventos que enriquecen tu experiencia universitaria y te conectan con una comunidad diversa de estudiantes.
                     </p>
                 </div>
                 <div class="md:w-1/2 mb-8 md:mb-0">
@@ -268,12 +259,11 @@
                     <button
                         class="w-full text-left py-4 px-6 focus:outline-none focus:bg-gray-100 hover:bg-gray-50 transition-colors duration-300"
                         onclick="toggleFAQ('faq3')">
-                        <span class="font-semibold text-gray-800">¿El CRUI ofrece becas o ayudas financieras?</span>
+                        <span class="font-semibold text-gray-800">¿Cuando son las fechas de inscripcion?</span>
                         <span class="float-right"><i class="fas fa-chevron-down"></i></span>
                     </button>
                     <div id="faq3" class="hidden px-6 pb-4">
-                        <p class="text-gray-600">Sí, el CRUI ofrece diversas becas y ayudas financieras para estudiantes
-                            que cumplen con los requisitos establecidos.</p>
+                        <p class="text-gray-600">Las fechas de inscripción pueden variar anualmente y según el programa académico. Se recomienda estar atento a los comunicados y publicaciones del CRUI, donde se anuncian las fechas específicas de inscripción para cada período académico. Estas fechas suelen ser publicadas con anticipación para que los interesados puedan preparar su documentación y realizar el proceso de inscripción a tiempo.</p>
                     </div>
                 </div>
                 <div class="border-t border-gray-200">
@@ -313,7 +303,17 @@
 </body>
 
 <style>
+
+    .logo-itu{
+        margin-left: 76px;
+    }
+
     @media screen and (max-width: 768px) {
+
+
+    .logo-itu{
+        margin-left: 0px;
+    }
     .grid{
         display: block;
     }
@@ -323,7 +323,7 @@
         background-position: center;
         background-repeat: no-repeat;
         width: 100%;
-        height: 70%;
+        height: 100%;
     
     }
     
@@ -337,6 +337,8 @@
     }
 
 
+
+
 body {
   margin: 0px;
   font-family: 'segoe ui';
@@ -345,8 +347,9 @@ body {
 .nav {
   height: 50px;
   width: 100%;
-  background-color: #4d4d4d;
+  background-color: #ffffff;
   position: fixed;
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.25);
 }
 
 .nav > .nav-header {
@@ -372,20 +375,32 @@ body {
 
 .nav > .nav-links > a {
   display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
   padding: 13px 10px 13px 10px;
   text-decoration: none;
-  color: #efefef;
+  color: #000000;
+  font-weight: 600;
+  transform: translateX(-90px);
 }
 
 .nav > .nav-links > a:hover {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.0);
 }
 
 .nav > #nav-check {
   display: none;
 }
 
-@media (max-width:600px) {
+@media (max-width:768px) {
+
+  .nav > .nav-links > a {
+   transform: translateX(0px);
+}
+  .nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.203);
+  transition: ease-in-out 0.5s;
+}
   .nav > .nav-btn {
     display: inline-block;
     position: fixed;
@@ -405,13 +420,13 @@ body {
     display: block;
     width: 25px;
     height: 10px;
-    border-top: 2px solid #eee;
+    border-top: 2px solid #000000;
   }
   .nav > .nav-links {
     position: fixed;
     display: block;
     width: 100%;
-    background-color: #333;
+    background-color: #ffffff;
     height: 0px;
     transition: all 0.3s ease-in;
     overflow-y: hidden;
@@ -420,7 +435,15 @@ body {
   }
   .nav > .nav-links > a {
     display: block;
+    justify-content: center;
+    justify-content: center;
+        text-align: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        align-self: center;
     width: 100%;
+    font-weight: 600;
   }
   .nav > #nav-check:not(:checked) ~ .nav-links {
     height: 0px;
@@ -428,6 +451,7 @@ body {
   .nav > #nav-check:checked ~ .nav-links {
     height: calc(100vh - 50px);
     overflow-y: auto;
+
   }
 }
 
