@@ -16,32 +16,84 @@
     <link rel="icon" href="img/Leopoldo MArechal.png">
 </head>
 
-<body id="inicio" class="bg-white">
-    <div class="nav" style="z-index: 10000;">
-        <input type="checkbox" id="nav-check">
-        <div class="nav-header">
-            <a href="#inicio"><img class="logo-itu"
-                    style="position: fixed; width: 140px; height: auto; margin-top: 5px;" src="icons/" alt="Logo"
-                    class="nav-logo">
-            </a>
-        </div>
-        <div class="nav-btn">
-            <label for="nav-check">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
+<div class="bg-white">
+    <!--navbar-->
+    <header class="absolute inset-x-0 top-0 z-50">
+        <nav class="flex items-center justify-between p-3 lg:px-6 bg-white shadow-md" aria-label="Global">
+            <div class="flex lg:flex-1">
+                <a href="#" class="-m-1.5 p-1.5">
+                    <span class="sr-only">Leopoldo Marechal</span>
+                    <img class="h-10 w-auto" src="img/iconoMunicipalidad.jpeg" alt="">
+                </a>
+            </div>
+            <div class="flex lg:hidden">
+                <!-- Boton para abrir el menu -->
+                <button id="open-menu" type="button"
+                    class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                    <span class="sr-only">menu</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+            <div class="hidden lg:flex lg:gap-x-10">
+                <a href="index.html" class="text-base font-semibold text-gray-900">Inicio</a>
+                <a href="#sobre-crui" class="text-base font-semibold text-gray-900">Sobre el CRUI</a>
+                <a href="#oferta-academica" class="text-base font-semibold text-gray-900">Oferta Académica</a>
+                <a href="#" class="text-base font-semibold text-gray-900">Contacto</a>
+            </div>
+        </nav>
+
+        <!-- Menu movil -->
+        <div id="mobile-menu"
+            class="hidden fixed inset-0 z-50 bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 overflow-y-auto"
+            role="dialog" aria-modal="true">
+            <div class="flex items-center justify-between">
+                <a href="#" class="-m-1.5 p-1.5">
+                    <span class="sr-only">Your Company</span>
+                    <img class="h-10 w-auto" src="iconoMunicipalidad.svg" alt="">
+                </a>
+                <!-- Boton para cerrar el menu -->
+                <button id="close-menu" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                    <span class="sr-only">Close menu</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="mt-6 flow-root">
+                <div class="-my-6 divide-y divide-gray-500/10">
+                    <div class="space-y-2 py-6">
+                        <a href="index.html"
+                            class="-mx-3 block rounded-lg px-3 py-2 text-lg font-semibold text-gray-900 hover:bg-gray-50">Inicio</a>
+                        <a href="#sobre-crui"
+                            class="-mx-3 block rounded-lg px-3 py-2 text-lg font-semibold text-gray-900 hover:bg-gray-50">Sobre
+                            el CRUI</a>
+                        <a href="#oferta-academica"
+                            class="-mx-3 block rounded-lg px-3 py-2 text-lg font-semibold text-gray-900 hover:bg-gray-50">Oferta
+                            Académica</a>
+                        <a href="#"
+                            class="-mx-3 block rounded-lg px-3 py-2 text-lg font-semibold text-gray-900 hover:bg-gray-50">Contacto</a>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="nav-links">
-            <a href="#inicio">Inicio</a>
-            <a href="#sobre">Conoce mas</a>
-            <a href="#oferta-academica">Carreras</a>
-            <a href="contacto.html">Contacto</a>
-        </div>
-    </div>
+        <script>
+            document.getElementById("open-menu").addEventListener("click", function () {
+                document.getElementById("mobile-menu").classList.remove("hidden");
+            });
 
-    <!--hero section-->	
+            document.getElementById("close-menu").addEventListener("click", function () {
+                document.getElementById("mobile-menu").classList.add("hidden");
+            });
+        </script>
+    </header>
+
+    <!--hero section-->
     <div class="relative h-screen flex items-center justify-center">
         <div class="absolute inset-0 bg-cover bg-center" id="fondo"
             style="background-image: url('./img/fondo%20crui%20frente.jpeg'); background-size: cover; background-position: center;">
@@ -100,7 +152,7 @@
     </section>
 
     <!-- Sección con imagen a la derecha y texto a la izquierda -->
-    <section class="py-16 bg-gray-50">
+    <section class="py-16 bg-gray-50" id="sobre-crui">
         <div class="container mx-auto px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 md:mr-10">
@@ -139,13 +191,14 @@
     </section>
 
     <!-- Nueva sección: Oferta Académica -->
-    <section class="py-16" id="oferta-academica" name="oferta-academica">
+    <section class="py-16" id="oferta-academica">
         <div class="container mx-auto px-4 py-12 bg-white rounded-lg shadow-lg">
             <div class="text-center mb-16">
                 <h1 class="text-4xl font-bold text-gray-800">Oferta Académica</h1>
                 <p class="text-lg mt-2 text-gray-500">La oferta académica ofrecida por el Instituto Técnico Lepoldo
                     Marechal</p>
             </div>
+
             <body class="py-8">
                 <div class="flex justify-center items-center min-h-0">
                     <div
@@ -282,180 +335,180 @@
         });
     </script>
 
-</body>
+    </body>
 
-<style>
-    #oferta-academica {
-        background: rgb(1, 119, 192);
-        background: linear-gradient(90deg, rgba(1, 119, 192, 1) 20%, rgba(0, 120, 193, 1) 30%, rgba(6, 112, 183, 1) 39%, rgba(139, 179, 49, 1) 100%);
-    }
-
-
-    .logo-itu {
-        margin-left: 76px;
-    }
-
-    #whatsapp {
-        margin-bottom: 20px;
-        margin-right: 30px;
-    }
-
-    @media screen and (max-width: 768px) {
+    <style>
+        #oferta-academica {
+            background: rgb(1, 119, 192);
+            background: linear-gradient(90deg, rgba(1, 119, 192, 1) 20%, rgba(0, 120, 193, 1) 30%, rgba(6, 112, 183, 1) 39%, rgba(139, 179, 49, 1) 100%);
+        }
 
 
         .logo-itu {
-            margin-left: 10px;
-        }
-
-        .grid {
-            display: block;
-        }
-
-        #fondo {
-            background-image: url('./img/fondo%20crui%20frente.jpeg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            width: 100%;
-            height: 100%;
-
+            margin-left: 76px;
         }
 
         #whatsapp {
-            margin: 0;
+            margin-bottom: 20px;
+            margin-right: 30px;
         }
 
-    }
+        @media screen and (max-width: 768px) {
 
-    .editame {
-        display: none;
-    }
 
-    body {
-        margin: 0px;
-        font-family: 'segoe ui';
-    }
+            .logo-itu {
+                margin-left: 10px;
+            }
 
-    .nav {
-        height: 50px;
-        width: 100%;
-        background-color: #ffffff;
-        position: fixed;
-        box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.25);
-    }
+            .grid {
+                display: block;
+            }
 
-    .nav>.nav-header {
-        display: inline;
-    }
+            #fondo {
+                background-image: url('./img/fondo%20crui%20frente.jpeg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 100%;
 
-    .nav>.nav-header>.nav-title {
-        display: inline-block;
-        font-size: 22px;
-        color: #fff;
-        padding: 10px 10px 10px 10px;
-    }
+            }
 
-    .nav>.nav-btn {
-        display: none;
-    }
+            #whatsapp {
+                margin: 0;
+            }
 
-    .nav>.nav-links {
-        display: inline;
-        float: right;
-        font-size: 18px;
-    }
-
-    .nav>.nav-links>a {
-        display: inline-block;
-        margin-left: 5px;
-        margin-right: 5px;
-        padding: 13px 10px 13px 10px;
-        text-decoration: none;
-        color: #000000;
-        font-weight: 600;
-        transform: translateX(-90px);
-    }
-
-    .nav>.nav-links>a:hover {
-        background-color: rgba(0, 0, 0, 0.0);
-    }
-
-    .nav>#nav-check {
-        display: none;
-    }
-
-    @media (max-width:768px) {
-
-        .nav>.nav-links>a {
-            transform: translateX(0px);
         }
 
-        .nav>.nav-links>a:hover {
-            background-color: rgba(0, 0, 0, 0.203);
-            transition: ease-in-out 0.5s;
+        .editame {
+            display: none;
+        }
+
+        body {
+            margin: 0px;
+            font-family: 'segoe ui';
+        }
+
+        .nav {
+            height: 50px;
+            width: 100%;
+            background-color: #ffffff;
+            position: fixed;
+            box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.25);
+        }
+
+        .nav>.nav-header {
+            display: inline;
+        }
+
+        .nav>.nav-header>.nav-title {
+            display: inline-block;
+            font-size: 22px;
+            color: #fff;
+            padding: 10px 10px 10px 10px;
         }
 
         .nav>.nav-btn {
-            display: inline-block;
-            position: fixed;
-            right: 0px;
-            top: 0px;
-        }
-
-        .nav>.nav-btn>label {
-            display: inline-block;
-            width: 50px;
-            height: 50px;
-            padding: 13px;
-        }
-
-        .nav>.nav-btn>label:hover,
-        .nav #nav-check:checked~.nav-btn>label {
-            background-color: rgba(0, 0, 0, 0.3);
-        }
-
-        .nav>.nav-btn>label>span {
-            display: block;
-            width: 25px;
-            height: 10px;
-            border-top: 2px solid #000000;
+            display: none;
         }
 
         .nav>.nav-links {
-            position: fixed;
-            display: block;
-            width: 100%;
-            background-color: #ffffff;
-            height: 0px;
-            transition: all 0.3s ease-in;
-            overflow-y: hidden;
-            top: 50px;
-            left: 0px;
+            display: inline;
+            float: right;
+            font-size: 18px;
         }
 
         .nav>.nav-links>a {
-            display: block;
-            justify-content: center;
-            justify-content: center;
-            text-align: center;
-            justify-items: center;
-            align-items: center;
-            align-content: center;
-            align-self: center;
-            width: 100%;
+            display: inline-block;
+            margin-left: 5px;
+            margin-right: 5px;
+            padding: 13px 10px 13px 10px;
+            text-decoration: none;
+            color: #000000;
             font-weight: 600;
+            transform: translateX(-90px);
         }
 
-        .nav>#nav-check:not(:checked)~.nav-links {
-            height: 0px;
+        .nav>.nav-links>a:hover {
+            background-color: rgba(0, 0, 0, 0.0);
         }
 
-        .nav>#nav-check:checked~.nav-links {
-            height: calc(100vh - 50px);
-            overflow-y: auto;
-
+        .nav>#nav-check {
+            display: none;
         }
-    }
-</style>
+
+        @media (max-width:768px) {
+
+            .nav>.nav-links>a {
+                transform: translateX(0px);
+            }
+
+            .nav>.nav-links>a:hover {
+                background-color: rgba(0, 0, 0, 0.203);
+                transition: ease-in-out 0.5s;
+            }
+
+            .nav>.nav-btn {
+                display: inline-block;
+                position: fixed;
+                right: 0px;
+                top: 0px;
+            }
+
+            .nav>.nav-btn>label {
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                padding: 13px;
+            }
+
+            .nav>.nav-btn>label:hover,
+            .nav #nav-check:checked~.nav-btn>label {
+                background-color: rgba(0, 0, 0, 0.3);
+            }
+
+            .nav>.nav-btn>label>span {
+                display: block;
+                width: 25px;
+                height: 10px;
+                border-top: 2px solid #000000;
+            }
+
+            .nav>.nav-links {
+                position: fixed;
+                display: block;
+                width: 100%;
+                background-color: #ffffff;
+                height: 0px;
+                transition: all 0.3s ease-in;
+                overflow-y: hidden;
+                top: 50px;
+                left: 0px;
+            }
+
+            .nav>.nav-links>a {
+                display: block;
+                justify-content: center;
+                justify-content: center;
+                text-align: center;
+                justify-items: center;
+                align-items: center;
+                align-content: center;
+                align-self: center;
+                width: 100%;
+                font-weight: 600;
+            }
+
+            .nav>#nav-check:not(:checked)~.nav-links {
+                height: 0px;
+            }
+
+            .nav>#nav-check:checked~.nav-links {
+                height: calc(100vh - 50px);
+                overflow-y: auto;
+
+            }
+        }
+    </style>
 
 </html>

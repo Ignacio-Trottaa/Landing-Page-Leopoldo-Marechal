@@ -12,17 +12,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
 function toggleFAQ(id) {
     const faq = document.getElementById(id);
     faq.classList.toggle('hidden');
 }
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+    anchor.addEventListener("click", function (e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+        const targetID = this.getAttribute("href").substring(1);
+        const targetSection = document.getElementById(targetID);
+        if (targetSection) {
+            window.scrollTo({
+                top: targetSection.offsetTop,
+                behavior: "smooth"
+            });
+        }
+
+        if (!document.querySelector(".lg\\:flex")) {
+            document.getElementById("mobile-menu").classList.add("hidden");
+        }
     });
 });
